@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jhana - AI Paralegal Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">jhana</div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#enterprise-features">Enterprise</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="signup-btn" id="loginBtn">Login</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <select name="plan" required>
+                    <option value="">Select Plan</option>
+                    <option value="starter">Starter</option>
+                    <option value="professional">Professional</option>
+                    <option value="enterprise">Enterprise</option>
+                </select>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><span class="highlight">jhana</span> is your<br><span class="highlight">AI paralegal.</span></h1>
+            <p class="hero-subtitle">Transform your legal practice with AI-powered document analysis and research.</p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="cta-button">Get Started</a>
+                <a href="#features" class="cta-button secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Professional Class AI For Industry Leaders</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>Paralegal</h3>
+                <p>A full-service associate</p>
+                <p class="feature-description">Your sandbox. Reads your messages, analyzes your files. Researches and cites 15M+ sources. Produces any kind of output — from grounds and propositions to advisory memos and contract redlines. Flexible and honest.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Doc Intelligence</h3>
+                <p>Transform your knowledge into competitive advantage</p>
+                <p class="feature-description">Automatically organizes, annotates, and summarizes any file you upload. Produces a custom evaluation checklist scrutinizing sensitive items and flagging risks.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Power Search</h3>
+                <p>Parallelize your research</p>
+                <p class="feature-description">Combines results from multiple queries submitted to different search engines to understand your intent, context, and nuances. Thematically summarizes results.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Starter</h3>
+                    <div class="price">$99<span>/month</span></div>
+                    <p>Perfect for individual lawyers</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Basic document analysis</li>
+                    <li><i class="fas fa-check"></i> Up to 100 documents/month</li>
+                    <li><i class="fas fa-check"></i> Standard support</li>
+                    <li><i class="fas fa-check"></i> Basic API access</li>
+                </ul>
+                <a href="#" class="pricing-button" data-plan="starter">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Professional</h3>
+                    <div class="price">$299<span>/month</span></div>
+                    <p>For growing law firms</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Advanced document analysis</li>
+                    <li><i class="fas fa-check"></i> Up to 500 documents/month</li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                    <li><i class="fas fa-check"></i> Advanced API access</li>
+                    <li><i class="fas fa-check"></i> Team collaboration</li>
+                </ul>
+                <a href="#" class="pricing-button" data-plan="professional">Get Started</a>
+            </div>
+            <div class="pricing-card enterprise">
+                <div class="pricing-header">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <p>For large organizations</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Unlimited document analysis</li>
+                    <li><i class="fas fa-check"></i> Custom integrations</li>
+                    <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                    <li><i class="fas fa-check"></i> Full API access</li>
+                    <li><i class="fas fa-check"></i> Advanced security features</li>
+                    <li><i class="fas fa-check"></i> Custom training</li>
+                </ul>
+                <a href="#contact" class="pricing-button">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="enterprise-features" class="enterprise-features">
+        <h2>Enterprise-Ready Features</h2>
+        <div class="enterprise-grid">
+            <div class="enterprise-feature">
+                <h3>Cloud Integration</h3>
+                <ul>
+                    <li><i class="fas fa-cloud"></i> Seamless integration with cloud storage</li>
+                    <li><i class="fas fa-sync"></i> Real-time synchronization</li>
+                    <li><i class="fas fa-shield-alt"></i> Enterprise-grade security</li>
+                </ul>
+            </div>
+            <div class="enterprise-feature">
+                <h3>Advanced Analytics</h3>
+                <ul>
+                    <li><i class="fas fa-chart-line"></i> Detailed usage analytics</li>
+                    <li><i class="fas fa-tasks"></i> Performance metrics</li>
+                    <li><i class="fas fa-file-contract"></i> Document insights</li>
+                </ul>
+            </div>
+            <div class="enterprise-feature">
+                <h3>Custom Solutions</h3>
+                <ul>
+                    <li><i class="fas fa-code"></i> Custom API development</li>
+                    <li><i class="fas fa-cogs"></i> Workflow automation</li>
+                    <li><i class="fas fa-users"></i> Team management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="security">
+        <h2>Custodianship</h2>
+        <p>One integrated, secure platform</p>
+        <div class="security-content">
+            <p>Legal work is often confidential, proprietary or sensitive — we are transparent and cautious custodians of your data.</p>
+            <ul class="security-features">
+                <li>No AI training on user data or sessions</li>
+                <li>Data encrypted end-to-end</li>
+                <li>Red team tested AI</li>
+                <li>Compliant with SOC 2 Types I & II and ISO 27001</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="data" class="data">
+        <h2>jhana's proprietary dataset meticulously covers over 15 million records.</h2>
+        <div class="data-grid">
+            <div class="data-item">
+                <h3>HC & SCI judgments</h3>
+            </div>
+            <div class="data-item">
+                <h3>Acts & subordinates</h3>
+            </div>
+            <div class="data-item">
+                <h3>Academic references</h3>
+            </div>
+        </div>
+        <p>Our data is updated daily, OCR'd, and annotated.<br>Our AI assistants also use the web browser and access plugins like Google Patents.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <select name="plan" required>
+                    <option value="">Select Plan</option>
+                    <option value="starter">Starter</option>
+                    <option value="professional">Professional</option>
+                    <option value="enterprise">Enterprise</option>
+                </select>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <a href="#" class="footer-link">Contact Sales</a>
+                <a href="#" class="footer-link">Learn More</a>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Careers</a>
+                <a href="#" class="footer-link">Blog</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 jhana. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
